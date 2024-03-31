@@ -1,0 +1,80 @@
+id	premise	hypothesis	entailment	contradiction	neutral	ng time unit	ng aspect	ng tp relation	test time format	category	cat id
+1	agent_1 は phrase_1_prog[が] いる。	agent_1 は 現在 phrase_1_prog いる。	True	False		year,month,day	None	None	None	現在（現在形）	1
+2	agent_1 は phrase_1_prog[が] いた。	agent_1 は 現在 phrase_1_prog いる。	False	False		year,month,day	None	None	None	現在（過去形）	2
+3	tp_1 以来、 agent_1 は phrase_1_prog[が] いる 。現在、 tp_2 である。	agent_1 は tp_3 には phrase_1_prog いた 。	tp_1.end <= tp_3.end, tp_3.end <= tp_2.end	False		None	None	tp_1.end > tp_2.end or tp_3.end > tp_2.end	年月日時	以来（テイタ形）	3
+4	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（推移律）	5
+5	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（推移律）	5
+6	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（推移律）	5
+7	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（推移律）	5
+8	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（推移律+前後)	6
+9	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（推移律+前後)	6
+10	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（推移律+前後)	6
+11	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（推移律+前後)	6
+12	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+13	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+14	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+15	agent_1 は agent_2 が phrase_1[が3] 前に phrase_1_past 。 agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+16	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+17	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	agent_1 は agent_3 が phrase_1 前に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+18	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_3 が phrase_1_past 後に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+19	agent_1 は agent_2 が phrase_1_past[が3] 後に phrase_1_past 。 agent_1 は agent_3 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_3 が phrase_1 前に phrase_1_past 。	False	False		year,month,day	None	None	None	順序（推移律不可）	7
+20	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 は agent_2 が phrase_1 前に phrase_1_past 。	agent_2 は agent_1 が phrase_1_past 後で phrase_1_past 。	True	False		year,month,day	None	None	None	順序（前後）	8
+21	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 は agent_2 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_1 が phrase_1 前に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（前後）	8
+22	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_2 は agent_1 が phrase_1 前に phrase_1_past 。	agent_1 は agent_2 が phrase_1_past 後で phrase_1_past 。	True	False		year,month,day	None	None	None	順序（前後）	8
+23	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 は agent_2 が phrase_1 前に phrase_1_past 。	agent_2 は agent_1 が phrase_1 前に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（前後）	8
+24	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 は agent_2 が phrase_1_past 後に phrase_1_past 。	agent_2 は agent_1 が phrase_1_past 後で phrase_1_past 。	False	True		year,month,day	None	None	None	順序（前後）	8
+25	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_2 は agent_1 が phrase_1 前に phrase_1_past 。	agent_1 は agent_2 が phrase_1 前に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（前後）	8
+26	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_2 は agent_1 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_2 が phrase_1 前に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（前後）	8
+27	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_2 は agent_1 が phrase_1_past 後に phrase_1_past 。	agent_1 は agent_2 が phrase_1_past 後で phrase_1_past 。	False	True		year,month,day	None	None	None	順序（前後）	8
+28	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 が agent_2 より先に phrase_1_past 。	agent_2 は agent_1 より後に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（先後）	10
+29	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 が agent_2 より後に phrase_1_past 。	agent_2 は agent_1 より先に phrase_1_past 。	True	False		year,month,day	None	None	None	順序（先後）	10
+30	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 が agent_2 より先に phrase_1_past 。	agent_2 は agent_1 より先に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（先後）	10
+31	agent_1 が phrase_1_past[が2] 。 agent_2 が phrase_1_past 。 agent_1 が agent_2 より後に phrase_1_past 。	agent_2 は agent_1 より後に phrase_1_past 。	False	True		year,month,day	None	None	None	順序（先後）	10
+32	agent_1 は tp_1 に phrase_1_prog[が] いた。	agent_1 は tp_2 に phrase_1_prog いた。	False	False		None	None	None	年月日時	未言及の時点	11
+33	agent_1 は tp_1 に phrase_1_past[が] 。	agent_1 は tp_2 に phrase_1_past 。	False	False		None	None	None	年月日時	未言及の時点	11
+34	agent_1 は tp_1 に np_1[を] を vp_1_prog[が,を] いた。	agent_1 は tp_2 にその np_1 を vp_1_prog いた。	False	False		None	None	None	年月日時	未言及の時点（照応+状態）	12
+35	agent_1 が tp_1 に np_1[を] を vp_1_past[が,を] 。	agent_1 はそれを tp_2 に vp_1_past 。	False	True		None	None	None	年月日時	未言及の時点（照応+事象）	13
+36	agent_1 は tp_1 に np_1[を] を vp_1_prog[が,を] いた。	agent_1 は tp_1 にその np_1 を vp_1_prog いた。	True	False		None	None	None	年月日時	言及済みの時点（照応+状態）	15
+37	agent_1 が tp_1 に np_1[を] を vp_1_past[が,を] 。	agent_1 はそれを tp_1 に vp_1_past 。	True	False		None	None	None	年月日時	言及済みの時点（照応+事象）	16
+38	昨日、 agent_1 は phrase_1_past[が] 。今日は tp_1 だ。	agent_1 は tp_2!=tp_1-1day に phrase_1_past 。	False	False		year.year,year.month,year.hour,month.month,month.hour,day.hour,hour.hour	None	None	年月日	照応（昨日）	18
+39	昨日、 agent_1 は phrase_1_past[が] 。今日は tp_1 だ。	agent_1 は tp_1-1day に phrase_1_past 。	True	False		year.year,year.month,year.hour,month.month,month.hour,day.hour,hour.hour	None	None	年月日	照応（昨日）	18
+40	agent_1 が interval_1 以内に np_1[を] を vp_1_past[が,を] 。 agent_1 は tp_2 にその np_1 を vp_1_coni 始めた。	agent_1 は tp_3 までにその np_1 を vp_1_coni 終えた。	tp_2.end + interval_1 <= tp_3.end	tp_3.end <= tp_2.start		None	状態/瞬間,継続主体動作均質	None	年月日時	2区間比較（以内/以内+区間計算）	19
+41	agent_1 が interval_1 以内に phrase_1_past[が] 。	agent_1 は interval_2 以内に phrase_1_past 。	interval_1 <= interval_2	False		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以内/以内）	20
+42	agent_1 が interval_1 以内に np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のにちょうど interval_2 を費やした。	False	interval_1 < interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以内/ちょうど）	21
+43	agent_1 は interval_1 以内に多くの np_1[を] を vp_1_past[が,を] 。	agent_1 は np_1 を vp_1 のにちょうど interval_2 を費やした。	False	interval_1 < interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以内/ちょうど+多く）	22
+44	agent_1 が interval_1 以内に np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のに interval_2 以上費やした。	False	interval_1 < interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以内/以上）	23
+45	agent_1 がちょうど interval_1 で np_1[を] を vp_1_past[が,を] 。 agent_1 は tp_2 にその np_1 を vp_1_coni 始めた。	agent_1 は tp_3 までにその np_1 を vp_1_coni 終えた。	tp_2.end + interval_1 <= tp_3.end	tp_3.end < tp_2.end + interval_1		None	状態/瞬間,継続主体動作均質	None	年月日時	2区間比較（ちょうど/以内+区間計算）	24
+46	agent_1 がちょうど interval_1 で phrase_1_past[が] 。	agent_1 は interval_2 以内に phrase_1_past 。	interval_1 <= interval_2	interval_1 > interval_2	False	None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（ちょうど/以内）	25
+47	agent_1 はちょうど interval_1 で np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のにちょうど interval_2 を費やした。	False	True	False	None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（ちょうど/ちょうど）	26
+48	agent_1 はちょうど interval_1 で多くの np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のにちょうど interval_2 を費やした。	False	interval_1 < interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（ちょうど/ちょうど+多く）	27
+49	agent_1 がちょうど interval_1 で np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のに interval_2 以上費やした。	interval_1 >= interval_2	interval_1 < interval_2	False	None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（ちょうど/以上）	28
+50	agent_1 が interval_1 以上かけて np_1[を] を vp_1_past[が,を] 。 agent_1 は tp_2 にその np_1 を vp_1_coni 始めた。	agent_1 は tp_3 までにその np_1 を vp_1_coni 終えた。	False	tp_3.end <= tp_2.start or tp_2.end + interval_1 > tp_3.end		None	状態/瞬間,継続主体動作均質,継続主体変化	None	年月日時	2区間比較（以上/以内+区間計算）	29
+51	agent_1 が interval_1 以上かけて phrase_1_past[が] 。	agent_1 は interval_2 以内に phrase_1_past 。	False	interval_1 > interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以上/以内）	30
+52	agent_1 が interval_1 以上かけて np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のにちょうど interval_2 を費やした。	False	interval_1 > interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以上/ちょうど）	31
+53	agent_1 は interval_1 以上かけて多くの np_1[を] を vp_1_past[が,を] 。	agent_1 は np_1 を vp_1 のにちょうど interval_2 を費やした。	False	False		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以上/ちょうど+多く）	32
+54	agent_1 は少なくとも interval_1 phrase_1_past[が] 。	agent_1 はちょうど interval_2 phrase_1_past 。	False	interval_1 > interval_2		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（少なくとも/ちょうど）	33
+55	agent_1 が interval_1 以上かけて np_1[を] を vp_1_past[が,を] 。	agent_1 はその np_1 を vp_1 のに interval_2 以上費やした。	interval_1 >= interval_2	False		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（以上/以上）	34
+56	agent_1 は少なくとも interval_1 phrase_1_past[が] 。	agent_1 は少なくとも interval_2 phrase_1_past 。	interval_1 >= interval_2	False		None	状態/瞬間,継続主体動作均質	None	時間	2区間比較（少なくとも/少なくとも）	35
+57	agent_1 が interval_1 [以内に,で,以上かけて] phrase_1_past[が] 。	agent_1 は phrase_1_past 。	True	False		None	状態/瞬間,継続主体動作均質	None	時間	完了	37
+58	agent_1 は interval_1 [,以上] phrase_1_past[が] 。	agent_1 は phrase_1_past 。	True	False		None	状態/瞬間	None	時間	完了	37
+59	agent_1 は interval_1 phrase_1_past[が] 。	agent_1 は phrase_1_past 。	True	False		None	状態/瞬間	None	時間	完了	37
+60	agent_1 はいつも遅れて phrase_1[が] 。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_2 に遅れて phrase_1_past 。	False	False		None	None	None	年月日時	習慣（未言及+いつも）	38
+61	agent_1 は決して遅れて phrase_1[が] ことはない。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_2 に遅れずに phrase_1_past 。	False	False		None	None	None	年月日時	習慣（未言及+決してない）	39
+62	agent_1 はいつも遅れて phrase_1[が] 。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_1 に遅れて phrase_1_past 。	True	False		None	None	None	年月日時	習慣（言及済み+いつも）	40
+63	agent_1 は決して遅れて phrase_1[が] ことはない。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_1 に遅れずに phrase_1_past 。	True	False		None	None	None	年月日時	習慣（言及済み+決してない）	41
+64	agent_1 はいつも遅れて phrase_1[が] 。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_2 に遅れずに phrase_1_past 。	False	True		None	None	None	年月日時	習慣+否定（未言及+いつも）	42
+65	agent_1 は決して遅れて phrase_1[が] ことはない。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_2 に遅れて phrase_1_past 。	False	True		None	None	None	年月日時	習慣+否定（未言及+決してない）	43
+66	agent_1 はいつも遅れて phrase_1[が] 。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_1 に遅れずに phrase_1_past 。	False	True		None	None	None	年月日時	習慣+否定（言及済み+いつも）	44
+67	agent_1 は決して遅れて phrase_1[が] ことはない。 tp_1 に agent_1 は phrase_1_past 。	agent_1 は tp_1 に遅れて phrase_1_past 。	False	True		None	None	None	年月日時	習慣+否定（言及済み+決してない）	45
+68	agent_1[が] は毎 time_unit_1 np_1[に] に np_2[を] を vp_1_past[が,に,を] 。	agent_1 が np_2 を vp_1_past np_1 が存在する。	True	False		hour	None	None	日間	習慣+存在量化	46
+69	agent_1[が] は毎 time_unit_1 np_1[に] に np_2[を] を vp_1_past[が,に,を] 。	agent_1 が np_2 を vp_1_past np_1 は存在しない。	False	True		hour	None	None	日間	習慣+存在量化（否定）	47
+70	agent_1[が] は毎 time_unit_1 np_1[に] に np_2[を] を vp_1_past[が,に,を] 。	agent_1 が毎 time_unit_1 np_2 を vp_1_past np_1 が存在する。	False	False		hour	None	None	日間	習慣+存在量化（毎+時間単位）	48
+71	今、 agent_1 は phrase_1_prog[が] いる。	agent_1 は既に phrase_1_prog いる。	phrase_1.aspect in ["継続主体動作均質", "継続主体変化", "状態/瞬間"]	phrase_1.aspect == "継続主体動作特定時点成立"	False	year,month,day	None	None	None	アスペクト解釈変更（ている/今→既に）_asp	49
+72	あの時、 agent_1 は phrase_1_prog[が] いた。	あの時、 agent_1 は既に phrase_1_prog いた。	phrase_1.aspect in ["継続主体動作均質", "継続主体変化", "状態/瞬間"]	phrase_1.aspect == "継続主体動作特定時点成立"	False	year,month,day	None	None	None	アスペクト解釈変更（ていた/既に追加）_asp	50
+73	あの時、 agent_1 は phrase_1_prog[が] いなかった。今、 agent_1 は phrase_1_prog いる。	agent_1 は phrase_1_past 。	phrase_1.aspect in ["継続主体動作均質", "継続主体変化"]	phrase_1.aspect == "継続主体動作特定時点成立"	False	year,month,day	状態/瞬間	None	None	アスペクト変更（ている→過去）_asp	51
+74	今、 agent_1 は phrase_1_prog[が] いる。	今、 agent_1 は phrase_1_prog いるところだ。	phrase_1.aspect in ["継続主体動作均質", "継続主体動作特定時点成立"]	False		year,month,day	状態/瞬間	None	None	アスペクト変更（ている→ているところ）_asp	52
+75	今、 agent_1 は phrase_1_prog[が] いる。	今、 agent_1 は phrase_1_coni かけている。	False	phrase_1.aspect in ["継続主体動作均質", "継続主体変化"]		year,month,day	状態/瞬間	None	None	アスペクト変更（ている→しかけている）_asp	53
+76	あの時、 agent_1 は phrase_1_prog[が] いた。	あの時、 agent_1 は phrase_1_past 。	phrase_1.aspect == "継続主体動作均質"	False		year,month,day	状態/瞬間	None	None	アスペクト変更（ていた→過去）_asp	54
+77	あの時、 agent_1 は phrase_1_prog[が] いた。	あの時、 agent_1 は phrase_1_prog いるところだった。	phrase_1.aspect in ["継続主体動作均質", "継続主体動作特定時点成立"]	False		year,month,day	状態/瞬間	None	None	アスペクト変更（ていた→ているところだった）_asp	55
+78	あの時、 agent_1 は phrase_1_prog[が] いた。	あの時、 agent_1 は phrase_1_coni かけていた。	False	phrase_1.aspect in ["継続主体動作均質", "継続主体変化"]		year,month,day	状態/瞬間	None	None	アスペクト変更（ていた→しかけていた）_asp	56
+79	agent_1 は既に phrase_1_prog[が] いた。	agent_1 は phrase_1_coni 終えた。	phrase_1.aspect == "継続主体動作特定時点成立"	False		year,month,day	状態/瞬間,継続主体変化	None	None	アスペクト変更（ていた→し終えた）_asp	57
