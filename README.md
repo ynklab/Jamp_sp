@@ -36,9 +36,11 @@
   year={2024},
   doi={}
 }
+```
 
 If you use this dataset in any published research, please cite the following:
 
+```
 @article{Sugimoto-jampsp-2023,
   title={Jamp_sp: Controlled Japanese Temporal Inference Dataset Considering Aspect},
   author={Sugimoto, Tomoki  and
