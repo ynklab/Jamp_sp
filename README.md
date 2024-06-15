@@ -26,22 +26,22 @@
 このデータセットを使用する場合は以下を引用してください。
 
 ```
-@article{Sugimoto-jampsp-2023,
+@article{Sugimoto-jampsp-2024,
   title={アスペクトを考慮した日本語時間推論データセットの構築},
   author={杉本 智紀 and 尾上 康雅 and 谷中 瞳},
   journal={自然言語処理},
   volume={31},
   number={2},
-  pages={-},
+  pages={637-679},
   year={2024},
-  doi={}
+  doi={10.5715/jnlp.31.637}
 }
 ```
 
 If you use this dataset in any published research, please cite the following:
 
 ```
-@article{Sugimoto-jampsp-2023,
+@article{Sugimoto-jampsp-2024,
   title={Jamp_sp: Controlled Japanese Temporal Inference Dataset Considering Aspect},
   author={Sugimoto, Tomoki  and
       Onoe, Yasumasa  and
@@ -49,9 +49,9 @@ If you use this dataset in any published research, please cite the following:
   journal={Journal of Natural Language Processing},
   volume={31},
   number={2},
-  pages={-},
+  pages={637-679},
   year={2024},
-  doi={}
+  doi={10.5715/jnlp.31.637}
 }
 ```
 
